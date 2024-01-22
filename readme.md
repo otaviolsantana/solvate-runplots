@@ -1,4 +1,4 @@
-# _**PLOTS**_
+# _**runPLOTS**_
 
 **_Solvate Module_**
 
@@ -7,3 +7,5 @@
 To install runPLOTS from binary form:
 
 	source runplots.install
+
+Visit: [https://github.com/otaviolsantana/solvate]
