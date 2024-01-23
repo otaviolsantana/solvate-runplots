@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Configuring instalation
+
+if [[ $HOME_SOLVATE == "" ]]; then
+   echo
+   echo " --------------------------------------------"
+   echo " Please define HOME_SOLVATE directory in your"
+   echo " PATH environmental variable in the .bashrc"
+   echo " file."
+   echo " --------------------------------------------"
+   echo
+   exit
+fi
+
+# Installing runPLOTS in a binary form
+
+echo
+echo "Installing runPLOTS..."
+
+cd runplots
+if [[ -f runplots.tgz.part01 ]]; then
+   cat runplots.tgz.part* > runplots.tgz
+fi
+if [[ -f runplots.tgz ]]; then
+   tar xzf runplots.tgz ; rm runplots.tgz
+fi
+if [[ -f runplots ]]; then
+   mv -f runplots   $HOME_SOLVATE/modules/runplotx
+  #chown root:users $HOME_SOLVATE/modules/runplotx
+   chmod ug+rx      $HOME_SOLVATE/modules/runplotx
+fi
+cd ..
+
+echo "DONE: Instalation of runPLOTS completed."
+echo
