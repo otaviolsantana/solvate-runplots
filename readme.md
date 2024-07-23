@@ -4,7 +4,7 @@
 
 **Installation**
 
-To install runPLOTS from binary form:
+To install the program from its binary format, after downloading the files, run the following command:
 
 	source runplots.install
 
